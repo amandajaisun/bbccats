@@ -39,7 +39,16 @@ elements.forEach(element => {
   img.style.width = '200px';  // or any size you want
   img.style.height = '200px'; // or any size you want
 
-  parent.replaceWith(img);
+  let div = document.createElement('div');
+  // Set the container's style to center its contents
+  div.style.display = 'flex';
+  div.style.justifyContent = 'center';
+  div.style.alignItems = 'center';
+
+  // Add the img to the container
+  div.appendChild(img);
+
+  parent.replaceWith(div);
 });
 
 // let images = document.getElementsByTagName('img');
