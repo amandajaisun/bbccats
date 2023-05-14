@@ -36,8 +36,8 @@ elements.forEach(element => {
   img.alt = "cat";
 
   // Set the image size
-  img.style.width = '200px';  // or any size you want
-  img.style.height = '200px'; // or any size you want
+  img.style.width = '200px';  
+  img.style.height = '200px'; 
 
   let div = document.createElement('div');
   // Set the container's style to center its contents
@@ -50,19 +50,3 @@ elements.forEach(element => {
 
   parent.replaceWith(div);
 });
-
-// let images = document.getElementsByTagName('img');
-// for (let i = 0; i < images.length; i++) {
-//   let messageChannel = new MessageChannel();
-//   messageChannel.port1.onmessage = function (event) {
-//     if (event.data.data && event.data.index != null) {
-//       images[event.data.index].src = event.data.data.url;
-//     }
-//   };
-//   if (navigator.serviceWorker.controller) {
-//     navigator.serviceWorker.controller.postMessage({ msg: 'image', index: i }, [messageChannel.port2]);
-//   } else {
-//     // Handle the case when there is no active service worker
-//     console.log('No active service worker.');
-//   }
-// }
